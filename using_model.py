@@ -1,6 +1,6 @@
 from transformers import BertTokenizer, BertForSequenceClassification, pipeline
 
-local_model_path = "cache1/model/ahmedrachid/FinancialBERT-Sentiment-Analysis/"
+local_model_path = "model/"
 
 print("Loading model and tokenizer...")
 model = BertForSequenceClassification.from_pretrained(local_model_path, num_labels=3)

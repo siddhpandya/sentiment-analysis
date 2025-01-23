@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from transformers import BertTokenizer, BertForSequenceClassification, pipeline
 
-local_model_path = "cache1/model/ahmedrachid/FinancialBERT-Sentiment-Analysis/"
+local_model_path = "model/"
 
 app = Flask(__name__)
 
