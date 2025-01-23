@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from transformers import BertTokenizer, BertForSequenceClassification, pipeline
 
 local_model_path = "model/"
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 print("Loading model and tokenizer...")
 model = BertForSequenceClassification.from_pretrained(local_model_path, num_labels=3)
